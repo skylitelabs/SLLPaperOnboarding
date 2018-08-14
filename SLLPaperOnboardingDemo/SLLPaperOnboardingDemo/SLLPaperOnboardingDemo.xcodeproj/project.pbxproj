@@ -15,6 +15,10 @@
 		AD2547D02121F511004F9D86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2547CF2121F511004F9D86 /* main.m */; };
 		AD2547DA2121F511004F9D86 /* SLLPaperOnboardingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2547D92121F511004F9D86 /* SLLPaperOnboardingDemoTests.m */; };
 		AD2547E52121F511004F9D86 /* SLLPaperOnboardingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2547E42121F511004F9D86 /* SLLPaperOnboardingDemoUITests.m */; };
+		AD2547F521220B60004F9D86 /* SLLPaperOnboarding.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2547F421220B60004F9D86 /* SLLPaperOnboarding.m */; };
+		AD2547F821220C1B004F9D86 /* SLLOnboardingItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2547F721220C1B004F9D86 /* SLLOnboardingItemInfo.m */; };
+		AD25480121221866004F9D86 /* SLLOnboardingContentViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480021221866004F9D86 /* SLLOnboardingContentViewItem.m */; };
+		AD25480421233B2B004F9D86 /* SLLOnboardingContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480321233B2B004F9D86 /* SLLOnboardingContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		AD2547E02121F511004F9D86 /* SLLPaperOnboardingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SLLPaperOnboardingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2547E42121F511004F9D86 /* SLLPaperOnboardingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPaperOnboardingDemoUITests.m; sourceTree = "<group>"; };
 		AD2547E62121F511004F9D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD2547F321220B60004F9D86 /* SLLPaperOnboarding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLPaperOnboarding.h; sourceTree = "<group>"; };
+		AD2547F421220B60004F9D86 /* SLLPaperOnboarding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPaperOnboarding.m; sourceTree = "<group>"; };
+		AD2547F621220C1B004F9D86 /* SLLOnboardingItemInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLOnboardingItemInfo.h; sourceTree = "<group>"; };
+		AD2547F721220C1B004F9D86 /* SLLOnboardingItemInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLOnboardingItemInfo.m; sourceTree = "<group>"; };
+		AD2547FF21221866004F9D86 /* SLLOnboardingContentViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLOnboardingContentViewItem.h; sourceTree = "<group>"; };
+		AD25480021221866004F9D86 /* SLLOnboardingContentViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLOnboardingContentViewItem.m; sourceTree = "<group>"; };
+		AD25480221233B2B004F9D86 /* SLLOnboardingContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLOnboardingContentView.h; sourceTree = "<group>"; };
+		AD25480321233B2B004F9D86 /* SLLOnboardingContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLOnboardingContentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		AD2547BF2121F50E004F9D86 /* SLLPaperOnboardingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AD2547F221220AEA004F9D86 /* SLLPaperOnboarding */,
 				AD2547C02121F50E004F9D86 /* SLLAppDelegate.h */,
 				AD2547C12121F50E004F9D86 /* SLLAppDelegate.m */,
 				AD2547C32121F50E004F9D86 /* SLLViewController.h */,
@@ -130,6 +143,70 @@
 				AD2547E62121F511004F9D86 /* Info.plist */,
 			);
 			path = SLLPaperOnboardingDemoUITests;
+			sourceTree = "<group>";
+		};
+		AD2547F221220AEA004F9D86 /* SLLPaperOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AD2547FD2122164C004F9D86 /* PageView */,
+				AD2547FC21221636004F9D86 /* OnboardingContentView */,
+				AD2547FB2122162D004F9D86 /* Helpers */,
+				AD2547FA21221624004F9D86 /* GestureControl */,
+				AD2547F921221614004F9D86 /* FillAnimationView */,
+				AD2547F321220B60004F9D86 /* SLLPaperOnboarding.h */,
+				AD2547F421220B60004F9D86 /* SLLPaperOnboarding.m */,
+				AD2547F621220C1B004F9D86 /* SLLOnboardingItemInfo.h */,
+				AD2547F721220C1B004F9D86 /* SLLOnboardingItemInfo.m */,
+			);
+			name = SLLPaperOnboarding;
+			path = ../../../Source;
+			sourceTree = "<group>";
+		};
+		AD2547F921221614004F9D86 /* FillAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FillAnimationView;
+			sourceTree = "<group>";
+		};
+		AD2547FA21221624004F9D86 /* GestureControl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GestureControl;
+			sourceTree = "<group>";
+		};
+		AD2547FB2122162D004F9D86 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AD2547FC21221636004F9D86 /* OnboardingContentView */ = {
+			isa = PBXGroup;
+			children = (
+				AD2547FE2122183F004F9D86 /* Item */,
+				AD25480221233B2B004F9D86 /* SLLOnboardingContentView.h */,
+				AD25480321233B2B004F9D86 /* SLLOnboardingContentView.m */,
+			);
+			path = OnboardingContentView;
+			sourceTree = "<group>";
+		};
+		AD2547FD2122164C004F9D86 /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
+		AD2547FE2122183F004F9D86 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				AD2547FF21221866004F9D86 /* SLLOnboardingContentViewItem.h */,
+				AD25480021221866004F9D86 /* SLLOnboardingContentViewItem.m */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD2547C52121F50E004F9D86 /* SLLViewController.m in Sources */,
+				AD25480421233B2B004F9D86 /* SLLOnboardingContentView.m in Sources */,
+				AD2547F821220C1B004F9D86 /* SLLOnboardingItemInfo.m in Sources */,
+				AD25480121221866004F9D86 /* SLLOnboardingContentViewItem.m in Sources */,
+				AD2547F521220B60004F9D86 /* SLLPaperOnboarding.m in Sources */,
 				AD2547D02121F511004F9D86 /* main.m in Sources */,
 				AD2547C22121F50E004F9D86 /* SLLAppDelegate.m in Sources */,
 			);

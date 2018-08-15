@@ -12,9 +12,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static CGFloat kDyOffsetAnimation = 110;
-static double kShowDuration = 0.8;
-static double kHideDuration = 0.2;
+static const CGFloat kSLLDyOffsetAnimation = 110;
+static const double kSLLShowDuration = 0.8;
+static const double kSLLHideDuration = 0.2;
 
 @class SLLOnboardingContentView;
 @class SLLOnboardingItemInfo;

@@ -108,7 +108,7 @@
         return;
     }
     if (item.descriptionBottomConstraint) {
-        item.descriptionBottomConstraint.constant -= kDyOffsetAnimation;
+        item.descriptionBottomConstraint.constant -= kSLLDyOffsetAnimation;
     }
     if (item.titleCenterConstraint) {
         item.titleCenterConstraint.constant *= 1.3;
@@ -128,7 +128,7 @@
 - (void)showItemView:(SLLOnboardingContentViewItem *)item
             duration:(double)duration {
     if (item.descriptionBottomConstraint) {
-        item.descriptionBottomConstraint.constant = kDyOffsetAnimation;
+        item.descriptionBottomConstraint.constant = kSLLDyOffsetAnimation;
     }
     if (item.titleCenterConstraint) {
         item.titleCenterConstraint.constant /= 2;
@@ -157,9 +157,9 @@
                      animated:(BOOL)animated {
     SLLOnboardingContentViewItem *showItem = [self createItemAtIndex:index];
     [self showItemView:showItem
-              duration:kShowDuration];
+              duration:kSLLShowDuration];
     [self hideItemView:self.currentItem
-              duration:kHideDuration];
+              duration:kSLLHideDuration];
     self.currentItem = showItem;
 }
 

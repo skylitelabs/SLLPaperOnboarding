@@ -19,6 +19,7 @@
 		AD2547F821220C1B004F9D86 /* SLLOnboardingItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2547F721220C1B004F9D86 /* SLLOnboardingItemInfo.m */; };
 		AD25480121221866004F9D86 /* SLLOnboardingContentViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480021221866004F9D86 /* SLLOnboardingContentViewItem.m */; };
 		AD25480421233B2B004F9D86 /* SLLOnboardingContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480321233B2B004F9D86 /* SLLOnboardingContentView.m */; };
+		AD25480721238679004F9D86 /* SLLFillAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480621238679004F9D86 /* SLLFillAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		AD25480021221866004F9D86 /* SLLOnboardingContentViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLOnboardingContentViewItem.m; sourceTree = "<group>"; };
 		AD25480221233B2B004F9D86 /* SLLOnboardingContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLOnboardingContentView.h; sourceTree = "<group>"; };
 		AD25480321233B2B004F9D86 /* SLLOnboardingContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLOnboardingContentView.m; sourceTree = "<group>"; };
+		AD25480521238679004F9D86 /* SLLFillAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLFillAnimationView.h; sourceTree = "<group>"; };
+		AD25480621238679004F9D86 /* SLLFillAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLFillAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 		AD2547F921221614004F9D86 /* FillAnimationView */ = {
 			isa = PBXGroup;
 			children = (
+				AD25480521238679004F9D86 /* SLLFillAnimationView.h */,
+				AD25480621238679004F9D86 /* SLLFillAnimationView.m */,
 			);
 			path = FillAnimationView;
 			sourceTree = "<group>";
@@ -345,6 +350,7 @@
 				AD25480121221866004F9D86 /* SLLOnboardingContentViewItem.m in Sources */,
 				AD2547F521220B60004F9D86 /* SLLPaperOnboarding.m in Sources */,
 				AD2547D02121F511004F9D86 /* main.m in Sources */,
+				AD25480721238679004F9D86 /* SLLFillAnimationView.m in Sources */,
 				AD2547C22121F50E004F9D86 /* SLLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

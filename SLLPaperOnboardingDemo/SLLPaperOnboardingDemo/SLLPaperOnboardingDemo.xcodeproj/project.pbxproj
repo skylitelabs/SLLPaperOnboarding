@@ -21,6 +21,7 @@
 		AD25480421233B2B004F9D86 /* SLLOnboardingContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480321233B2B004F9D86 /* SLLOnboardingContentView.m */; };
 		AD25480721238679004F9D86 /* SLLFillAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480621238679004F9D86 /* SLLFillAnimationView.m */; };
 		AD25480B21249024004F9D86 /* SLLPageViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480A21249024004F9D86 /* SLLPageViewItem.m */; };
+		AD25480F2124CA86004F9D86 /* SLLPageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480E2124CA86004F9D86 /* SLLPageContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		AD25480621238679004F9D86 /* SLLFillAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLFillAnimationView.m; sourceTree = "<group>"; };
 		AD25480921249024004F9D86 /* SLLPageViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLPageViewItem.h; sourceTree = "<group>"; };
 		AD25480A21249024004F9D86 /* SLLPageViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPageViewItem.m; sourceTree = "<group>"; };
+		AD25480D2124CA86004F9D86 /* SLLPageContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLPageContainer.h; sourceTree = "<group>"; };
+		AD25480E2124CA86004F9D86 /* SLLPageContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPageContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,7 @@
 		AD2547FD2122164C004F9D86 /* PageView */ = {
 			isa = PBXGroup;
 			children = (
+				AD25480C2124CA66004F9D86 /* PageContainerView */,
 				AD25480821249003004F9D86 /* Item */,
 			);
 			path = PageView;
@@ -225,6 +229,15 @@
 				AD25480A21249024004F9D86 /* SLLPageViewItem.m */,
 			);
 			path = Item;
+			sourceTree = "<group>";
+		};
+		AD25480C2124CA66004F9D86 /* PageContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				AD25480D2124CA86004F9D86 /* SLLPageContainer.h */,
+				AD25480E2124CA86004F9D86 /* SLLPageContainer.m */,
+			);
+			path = PageContainerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD25480F2124CA86004F9D86 /* SLLPageContainer.m in Sources */,
 				AD2547C52121F50E004F9D86 /* SLLViewController.m in Sources */,
 				AD25480421233B2B004F9D86 /* SLLOnboardingContentView.m in Sources */,
 				AD2547F821220C1B004F9D86 /* SLLOnboardingItemInfo.m in Sources */,

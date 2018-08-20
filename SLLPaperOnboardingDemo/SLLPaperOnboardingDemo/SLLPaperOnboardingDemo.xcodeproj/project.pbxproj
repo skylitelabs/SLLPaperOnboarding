@@ -23,6 +23,7 @@
 		AD25480B21249024004F9D86 /* SLLPageViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480A21249024004F9D86 /* SLLPageViewItem.m */; };
 		AD25480F2124CA86004F9D86 /* SLLPageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480E2124CA86004F9D86 /* SLLPageContainer.m */; };
 		AD25481221261309004F9D86 /* SLLPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25481121261309004F9D86 /* SLLPageView.m */; };
+		AD254815212B343D004F9D86 /* SLLGestureControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AD254814212B343D004F9D86 /* SLLGestureControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		AD25480E2124CA86004F9D86 /* SLLPageContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPageContainer.m; sourceTree = "<group>"; };
 		AD25481021261309004F9D86 /* SLLPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLPageView.h; sourceTree = "<group>"; };
 		AD25481121261309004F9D86 /* SLLPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPageView.m; sourceTree = "<group>"; };
+		AD254813212B343D004F9D86 /* SLLGestureControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLGestureControl.h; sourceTree = "<group>"; };
+		AD254814212B343D004F9D86 /* SLLGestureControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLGestureControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,8 @@
 		AD2547FA21221624004F9D86 /* GestureControl */ = {
 			isa = PBXGroup;
 			children = (
+				AD254813212B343D004F9D86 /* SLLGestureControl.h */,
+				AD254814212B343D004F9D86 /* SLLGestureControl.m */,
 			);
 			path = GestureControl;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				AD25480421233B2B004F9D86 /* SLLOnboardingContentView.m in Sources */,
 				AD2547F821220C1B004F9D86 /* SLLOnboardingItemInfo.m in Sources */,
 				AD25480121221866004F9D86 /* SLLOnboardingContentViewItem.m in Sources */,
+				AD254815212B343D004F9D86 /* SLLGestureControl.m in Sources */,
 				AD2547F521220B60004F9D86 /* SLLPaperOnboarding.m in Sources */,
 				AD25480B21249024004F9D86 /* SLLPageViewItem.m in Sources */,
 				AD2547D02121F511004F9D86 /* main.m in Sources */,

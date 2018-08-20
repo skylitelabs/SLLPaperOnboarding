@@ -22,6 +22,7 @@
 		AD25480721238679004F9D86 /* SLLFillAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480621238679004F9D86 /* SLLFillAnimationView.m */; };
 		AD25480B21249024004F9D86 /* SLLPageViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480A21249024004F9D86 /* SLLPageViewItem.m */; };
 		AD25480F2124CA86004F9D86 /* SLLPageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25480E2124CA86004F9D86 /* SLLPageContainer.m */; };
+		AD25481221261309004F9D86 /* SLLPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD25481121261309004F9D86 /* SLLPageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		AD25480A21249024004F9D86 /* SLLPageViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPageViewItem.m; sourceTree = "<group>"; };
 		AD25480D2124CA86004F9D86 /* SLLPageContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLPageContainer.h; sourceTree = "<group>"; };
 		AD25480E2124CA86004F9D86 /* SLLPageContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPageContainer.m; sourceTree = "<group>"; };
+		AD25481021261309004F9D86 /* SLLPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLLPageView.h; sourceTree = "<group>"; };
+		AD25481121261309004F9D86 /* SLLPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLLPageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,8 @@
 			children = (
 				AD25480C2124CA66004F9D86 /* PageContainerView */,
 				AD25480821249003004F9D86 /* Item */,
+				AD25481021261309004F9D86 /* SLLPageView.h */,
+				AD25481121261309004F9D86 /* SLLPageView.m */,
 			);
 			path = PageView;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				AD2547D02121F511004F9D86 /* main.m in Sources */,
 				AD25480721238679004F9D86 /* SLLFillAnimationView.m in Sources */,
 				AD2547C22121F50E004F9D86 /* SLLAppDelegate.m in Sources */,
+				AD25481221261309004F9D86 /* SLLPageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@
 
 @interface SLLPageView ()
 
-@property (nonatomic, readwrite, nullable, copy) NSLayoutConstraint *containerX;
+@property (nonatomic, readwrite, nullable, strong) NSLayoutConstraint *containerX;
 
 @end
 
@@ -20,13 +20,13 @@
                    itemsCount:(NSInteger)itemsCount
                        radius:(CGFloat)radius
                selectedRadius:(CGFloat)selectedRadius
-                    itemColor:(NSArray<UIColor *> *)itemColor {
+                    itemColor:(UIColor *(^_Nullable)(NSInteger index))itemColor {
     if (self = [super initWithFrame:frame]) {
         self.itemsCount = itemsCount;
         self.itemRadius = radius;
         self.selectedItemRadius = selectedRadius;
         self.itemColor = itemColor;
-        // TODO: commonInit
+        [self commonInit];
     }
     return self;
 }
@@ -61,7 +61,7 @@
                  bottomConstant:(CGFloat)bottomConstant
                          radius:(CGFloat)radius
                  selectedRadius:(CGFloat)selectedRadius
-                      itemColor:(NSArray<UIColor *> *)itemColor {
+                      itemColor:(UIColor * (^_Nullable)(NSInteger index))itemColor {
     SLLPageView *pageView = [[SLLPageView alloc] initWithFrame:CGRectZero
                                                     itemsCount:itemsCount
                                                         radius:radius
@@ -137,6 +137,7 @@
 }
 
 - (void)setConfiguration:(void (^)(SLLPageViewItem * _Nullable, NSInteger))configuration {
+    _configuration = configuration;
     if (self.containerView && self.containerView.items) {
         [self configurePageItems:self.containerView.items];
     }

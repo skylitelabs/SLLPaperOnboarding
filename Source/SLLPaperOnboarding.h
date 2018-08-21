@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SLLOnboardingItemInfo.h"
+#import "SLLOnboardingContentView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -28,13 +29,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onboardingWillTransitionToIndex:(NSInteger)index;
 - (void)onboardingWillTransitionToLeaving;
 - (void)onboardingDidTransitionToIndex:(NSInteger)index;
-// TODO: Delegate method for configuring Onboarding Content View
+- (void)onboardingConfigurationItem:(SLLOnboardingContentViewItem *)item
+                              index:(NSInteger)index;
 - (BOOL)enableTapsOnPageControl;
 
 @end
 
 @interface SLLPaperOnboarding : UIView
 
+@property (nonatomic, readwrite, nullable, weak) id<SLLPaperOnboardingDataSource> dataSource;
+@property (nonatomic, readwrite, nullable, weak) id<SLLPaperOnboardingDelegate> delegate;
+
+- (nullable instancetype)initWithPageViewBottomConstant:(CGFloat)pageViewBottomConstant;
+- (void)setCurrentIndexToIndex:(NSInteger)index
+                      animated:(BOOL)animated;
 
 
 @end

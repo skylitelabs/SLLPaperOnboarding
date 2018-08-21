@@ -165,7 +165,6 @@
 			children = (
 				AD2547FD2122164C004F9D86 /* PageView */,
 				AD2547FC21221636004F9D86 /* OnboardingContentView */,
-				AD2547FB2122162D004F9D86 /* Helpers */,
 				AD2547FA21221624004F9D86 /* GestureControl */,
 				AD2547F921221614004F9D86 /* FillAnimationView */,
 				AD2547F321220B60004F9D86 /* SLLPaperOnboarding.h */,
@@ -193,13 +192,6 @@
 				AD254814212B343D004F9D86 /* SLLGestureControl.m */,
 			);
 			path = GestureControl;
-			sourceTree = "<group>";
-		};
-		AD2547FB2122162D004F9D86 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		AD2547FC21221636004F9D86 /* OnboardingContentView */ = {

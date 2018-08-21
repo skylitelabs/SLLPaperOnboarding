@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite, assign) CGFloat selectedItemRadius;
 @property (nonatomic, readwrite, assign) double duration;
 @property (nonatomic, readwrite, assign) CGFloat space;
-@property (nonatomic, readwrite, nullable, copy) NSArray<UIColor *> *itemColor;
+@property (nonatomic, readwrite, nullable, copy) UIColor * (^itemColor)(NSInteger index);
 @property (nonatomic, readwrite, nullable, strong) SLLPageContainer *containerView;
 @property (nonatomic, readwrite, nullable, copy) void (^configuration)(SLLPageViewItem *_Nullable item,
                                                                        NSInteger index);
@@ -29,13 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
                             itemsCount:(NSInteger)itemsCount
                                 radius:(CGFloat)radius
                         selectedRadius:(CGFloat)selectedRadius
-                             itemColor:(nonnull NSArray<UIColor *> *)itemColor;
+                             itemColor:(UIColor *(^_Nullable)(NSInteger index))itemColor;
 + (nullable SLLPageView *)pageViewOnView:(nonnull UIView *)view
                               itemsCount:(NSInteger)itemsCount
                           bottomConstant:(CGFloat)bottomConstant
                                   radius:(CGFloat)radius
                           selectedRadius:(CGFloat)selectedRadius
-                               itemColor:(nonnull NSArray<UIColor *> *)itemColor;
+                               itemColor:(UIColor * (^_Nullable)(NSInteger index))itemColor;
 
 - (void)setCurrentIndexToIndex:(NSInteger)index
                       animated:(BOOL)animated;

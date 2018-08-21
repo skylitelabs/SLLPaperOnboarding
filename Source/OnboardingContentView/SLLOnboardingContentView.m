@@ -95,9 +95,9 @@
     [view addConstraint:[NSLayoutConstraint constraintWithItem:contentView
                                                      attribute:NSLayoutAttributeBottom
                                                      relatedBy:NSLayoutRelationEqual
-                                                        toItem:nil
-                                                     attribute:NSLayoutAttributeNotAnAttribute
-                                                    multiplier:0.f
+                                                        toItem:view
+                                                     attribute:NSLayoutAttributeBottom
+                                                    multiplier:1.f
                                                       constant:bottomConstant]];
     return contentView;
 }

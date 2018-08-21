@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
                          selectedRadius:(CGFloat)selectedRadius
                                   space:(CGFloat)space
                              itemsCount:(NSInteger)itemsCount
-                              itemColor:(nullable NSArray<UIColor *> *)itemColor;
+                              itemColor:(UIColor * (^_Nullable)(NSInteger index))itemColor;
 - (void)setCurrentIndexToIndex:(NSInteger)index
                       duration:(double)duration
                       animated:(BOOL)animated;

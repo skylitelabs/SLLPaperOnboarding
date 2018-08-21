@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SLLPaperOnboarding.h"
 
 @interface SLLViewController : UIViewController
 
+@property (nonatomic, readwrite, nonnull, strong) UIButton *skipButton;
 
 @end
 

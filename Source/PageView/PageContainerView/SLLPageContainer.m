@@ -23,7 +23,7 @@
                 selectedRadius:(CGFloat)selectedRadius
                          space:(CGFloat)space
                     itemsCount:(NSInteger)itemsCount
-                     itemColor:(NSArray<UIColor *> *)itemColor {
+                     itemColor:(UIColor * (^_Nullable)(NSInteger index))itemColor {
     if (self = [super initWithFrame:CGRectZero]) {
         self.animationKey = @"animationKey";
         self.itemsCount = itemsCount;
@@ -83,13 +83,11 @@
 - (NSArray<SLLPageViewItem *> *)createItemsWithCount:(NSInteger)count
                                               radius:(CGFloat)radius
                                       selectedRadius:(CGFloat)selectedRadius
-                                           itemColor:(NSArray<UIColor *> *)itemColor {
+                                           itemColor:(UIColor * (^_Nullable)(NSInteger index))itemColor {
     if (count < 1) {
         [NSException raise:@"CountTooLow" format:@"The count must be greater than 0"];
     } else if (!itemColor) {
-        [NSException raise:@"MissingParam" format:@"itemColor must be an initialized array"];
-    } else if ([itemColor count] < count) {
-        [NSException raise:@"OutOfBounds" format:@"itemColor must have more or equal to the count of the items"];
+        [NSException raise:@"MissingParam" format:@"itemColor must be an initialized code block"];
     }
     NSMutableArray<SLLPageViewItem *> *items = [[NSMutableArray alloc] init];
     
@@ -98,7 +96,7 @@
     SLLPageViewItem *item = [self createItemWithRadius:radius
                                         selectedRadius:selectedRadius
                                             isSelected:YES
-                                             itemColor:itemColor[tag - 1]];
+                                             itemColor:itemColor ? itemColor(tag - 1) : [UIColor whiteColor]];
     item.tag = tag;
     [self addConstraintsToView:item radius:selectedRadius];
     [items addObject:item];
@@ -108,7 +106,7 @@
         SLLPageViewItem *nextItem = [self createItemWithRadius:radius
                                                 selectedRadius:selectedRadius
                                                     isSelected:NO
-                                                     itemColor:itemColor[tag-1]];
+                                                     itemColor:itemColor ? itemColor(tag - 1) : [UIColor whiteColor]];
         [self addConstraintsToView:nextItem
                           leftItem:item
                             radius:radius];

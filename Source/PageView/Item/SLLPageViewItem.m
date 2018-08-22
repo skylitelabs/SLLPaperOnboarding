@@ -16,6 +16,7 @@
                      lineWidth:(CGFloat)lineWidth
                       isSelect:(BOOL)isSelect {
     if (self = [super initWithFrame:CGRectZero]) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
         self.itemColor = itemColor;
         self.lineWidth = lineWidth;
         self.circleRadius = radius;
@@ -98,6 +99,7 @@
                                                      attribute:NSLayoutAttributeWidth
                                                     multiplier:1.f
                                                       constant:0]];
+    NSLog(@"%f, %f", self.center.x, self.center.y);
     return view;
 }
 

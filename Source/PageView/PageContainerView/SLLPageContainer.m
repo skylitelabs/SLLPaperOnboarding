@@ -25,6 +25,7 @@
                     itemsCount:(NSInteger)itemsCount
                      itemColor:(UIColor * (^_Nullable)(NSInteger index))itemColor {
     if (self = [super initWithFrame:CGRectZero]) {
+        self.translatesAutoresizingMaskIntoConstraints = NO;
         self.animationKey = @"animationKey";
         self.itemsCount = itemsCount;
         self.space = space;
@@ -50,7 +51,16 @@
     if (!(self.items && index != self.currentIndex)) {
         return;
     }
-    
+    [self animationItem:self.items[index]
+               selected:YES
+               duration:duration
+              fillColor:NO];
+    BOOL fillColor = (index > self.currentIndex);
+    [self animationItem:self.items[self.currentIndex]
+               selected:NO
+               duration:duration
+              fillColor:fillColor];
+    self.currentIndex = index;
 }
 
 #pragma mark - Animations
@@ -65,7 +75,6 @@
     for (NSLayoutConstraint *constraint in itemConstraints) {
         constraint.constant = toValue;
     }
-    
     [UIView animateWithDuration:duration
                           delay:0
                         options:UIViewAnimationOptionCurveEaseOut

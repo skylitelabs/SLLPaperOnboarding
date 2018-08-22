@@ -82,7 +82,7 @@
                                                      attribute:NSLayoutAttributeRight
                                                      relatedBy:NSLayoutRelationEqual
                                                         toItem:view
-                                                     attribute:NSLayoutAttributeLeft
+                                                     attribute:NSLayoutAttributeRight
                                                     multiplier:1.f
                                                       constant:0]];
     [view addConstraint:[NSLayoutConstraint constraintWithItem:contentView

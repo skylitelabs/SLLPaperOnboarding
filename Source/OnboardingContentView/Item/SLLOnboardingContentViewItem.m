@@ -24,12 +24,34 @@
 }
 
 - (void)commonInit {
-//    UILabel *titleLabel =
+    UILabel *titleLabel = [self createTitleLabelOnView:self];
+    UILabel *descriptionLabel = [self createDescriptionLabelOnView:self];
+    UIImageView *imageView = [self createImageOnView:self];
+    
+    self.titleCenterConstraint = [NSLayoutConstraint constraintWithItem:titleLabel
+                                                              attribute:NSLayoutAttributeTop
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:imageView
+                                                              attribute:NSLayoutAttributeBottom
+                                                             multiplier:1.f
+                                                               constant:50.f];
+    [self addConstraint:self.titleCenterConstraint];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:descriptionLabel
+                                                     attribute:NSLayoutAttributeTop
+                                                     relatedBy:NSLayoutRelationEqual
+                                                        toItem:titleLabel
+                                                     attribute:NSLayoutAttributeBottom
+                                                    multiplier:1.f
+                                                      constant:10.f]];
+    self.titleLabel = titleLabel;
+    self.descriptionLabel = descriptionLabel;
+    self.imageView = imageView;
 }
 
 - (UILabel *)createTitleLabelOnView:(UIView *)view {
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont fontWithName:@"AvenirNext-Bold" size:36];
+    label.textAlignment = NSTextAlignmentCenter;
     label.translatesAutoresizingMaskIntoConstraints = NO;
     [view addSubview:label];
     [view addConstraint:[NSLayoutConstraint constraintWithItem:label
@@ -60,6 +82,8 @@
                                                      attribute:NSLayoutAttributeTrailing
                                                     multiplier:1.f
                                                       constant:0]];
+    NSLog(@"%@", view.trailingAnchor);
+    NSLog(@"%@", view.constraints);
     return label;
 }
 
@@ -67,6 +91,7 @@
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont fontWithName:@"AvenirNext-Regular" size:14];
     label.numberOfLines = 0;
+    label.textAlignment = NSTextAlignmentCenter;
     label.translatesAutoresizingMaskIntoConstraints = NO;
     [view addSubview:label];
     [view addConstraint:[NSLayoutConstraint constraintWithItem:label
@@ -121,7 +146,7 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    [view addSubview:view];
+    [view addSubview:imageView];
     
     self.informationImageWidthConstraint = [NSLayoutConstraint constraintWithItem:imageView
                                                                         attribute:NSLayoutAttributeWidth

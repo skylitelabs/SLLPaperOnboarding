@@ -131,7 +131,7 @@
 }
 
 - (void)commonInit {
-    [self createContainerView];
+    self.containerView = [self createContainerView];
     [self setCurrentIndexToIndex:0
                         animated:NO];
     self.backgroundColor = [UIColor clearColor];

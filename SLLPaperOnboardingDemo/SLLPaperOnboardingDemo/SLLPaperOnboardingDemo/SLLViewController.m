@@ -74,11 +74,11 @@
                                                                            descriptionFont:self.descriptionFont];
     self.items = @[item1, item2, item3];
                                     
-    self.skipButton = [[UIButton alloc] init];
-    self.skipButton.titleLabel.text = @"Skip";
-    self.skipButton.hidden = YES;
+//    self.skipButton = [[UIButton alloc] init];
+//    self.skipButton.titleLabel.text = @"Skip";
+//    self.skipButton.hidden = YES;
     [self setupPaperOnboardingView];
-    [self.view bringSubviewToFront:self.skipButton];
+//    [self.view bringSubviewToFront:self.skipButton];
 }
 
 - (void)setupPaperOnboardingView {
@@ -121,7 +121,7 @@
 #pragma mark - Paper Onboarding Delegate
 
 - (void)onboardingWillTransitionToIndex:(NSInteger)index {
-    self.skipButton.hidden = !(index == 2);
+//    self.skipButton.hidden = !(index == 2);
 }
 
 - (void)onboardingDidTransitionToIndex:(NSInteger)index {

@@ -16,7 +16,6 @@
                      lineWidth:(CGFloat)lineWidth
                       isSelect:(BOOL)isSelect {
     if (self = [super initWithFrame:CGRectZero]) {
-        self.translatesAutoresizingMaskIntoConstraints = NO;
         self.itemColor = itemColor;
         self.lineWidth = lineWidth;
         self.circleRadius = radius;
@@ -36,7 +35,7 @@
 - (void)animationSelected:(BOOL)selected
                  duration:(double)duration
                 fillColor:(BOOL)fillColor {
-    CGFloat toAlpha = selected == YES ? 1 : 0;
+    CGFloat toAlpha = selected ? 1 : 0;
     [self imageAlphaAnimationToValue:toAlpha duration:duration];
     
     CGFloat currentRadius = selected ? self.selectedCircleRadius : self.circleRadius;
@@ -61,13 +60,14 @@
 
 - (UIView *)createBorderView {
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
-    view.backgroundColor = [UIColor blueColor];
+    view.backgroundColor = [UIColor clearColor];
     view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:view];
     
     // build circle layer
-    CGFloat currentRadius = self.select == YES ? self.selectedCircleRadius : self.circleRadius;
-    CAShapeLayer *circleLayer = [self createCircleLayerWithRadius:currentRadius lineWidth:self.lineWidth];
+    CGFloat currentRadius = self.select ? self.selectedCircleRadius : self.circleRadius;
+    CAShapeLayer *circleLayer = [self createCircleLayerWithRadius:currentRadius
+                                                        lineWidth:self.lineWidth];
     [view.layer addSublayer:circleLayer];
     self.circleLayer = circleLayer;
     
@@ -88,18 +88,17 @@
     [self addConstraint:[NSLayoutConstraint constraintWithItem:view
                                                      attribute:NSLayoutAttributeHeight
                                                      relatedBy:NSLayoutRelationEqual
-                                                        toItem:self
-                                                     attribute:NSLayoutAttributeHeight
+                                                        toItem:nil
+                                                     attribute:NSLayoutAttributeNotAnAttribute
                                                     multiplier:1.f
                                                       constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:view
                                                      attribute:NSLayoutAttributeWidth
                                                      relatedBy:NSLayoutRelationEqual
-                                                        toItem:self
-                                                     attribute:NSLayoutAttributeWidth
+                                                        toItem:nil
+                                                     attribute:NSLayoutAttributeNotAnAttribute
                                                     multiplier:1.f
                                                       constant:0]];
-    NSLog(@"%f, %f", self.center.x, self.center.y);
     return view;
 }
 
@@ -108,7 +107,7 @@
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointZero
                                                         radius:radius - (lineWidth / 2.f)
                                                     startAngle:0
-                                                      endAngle:0
+                                                      endAngle:(2.f * M_PI)
                                                      clockwise:YES];
     CAShapeLayer *layer = [[CAShapeLayer alloc] init];
     layer.path = [path CGPath];
@@ -122,7 +121,7 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    imageView.alpha = self.select == YES ? 1 : 0;
+    imageView.alpha = self.select ? 1 : 0;
     [self addSubview:imageView];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:imageView
                                                      attribute:NSLayoutAttributeLeft

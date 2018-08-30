@@ -114,7 +114,11 @@
 
 - (void)commonInit {
     if (self.dataSource) {
-        self.itemsCount = [self.dataSource onboardingItemsCount];
+        if ([self.dataSource respondsToSelector:@selector(onboardingItemsCount)]) {
+            self.itemsCount = [self.dataSource onboardingItemsCount];
+        } else {
+            self.itemsCount = 0;
+        }
         if ([self.dataSource respondsToSelector:@selector(onboardingPageItemRadius)]) {
             self.pageViewRadius = [self.dataSource onboardingPageItemRadius];
         } else {

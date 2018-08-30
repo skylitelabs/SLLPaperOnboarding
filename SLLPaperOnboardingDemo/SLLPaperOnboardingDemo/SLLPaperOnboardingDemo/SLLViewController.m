@@ -82,7 +82,7 @@
 }
 
 - (void)setupPaperOnboardingView {
-    SLLPaperOnboarding *onboarding = [[SLLPaperOnboarding alloc] init];
+    SLLPaperOnboarding *onboarding = [[SLLPaperOnboarding alloc] initWithPageViewBottomConstant:32];
     onboarding.delegate = self;
     onboarding.dataSource = self;
     onboarding.translatesAutoresizingMaskIntoConstraints = NO;

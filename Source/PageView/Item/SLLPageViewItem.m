@@ -36,7 +36,8 @@
                  duration:(double)duration
                 fillColor:(BOOL)fillColor {
     CGFloat toAlpha = selected ? 1 : 0;
-    [self imageAlphaAnimationToValue:toAlpha duration:duration];
+    [self imageAlphaAnimationToValue:toAlpha
+                            duration:duration];
     
     CGFloat currentRadius = selected ? self.selectedCircleRadius : self.circleRadius;
     CABasicAnimation *scaleAnimation = [self circleScaleAnimationToRadius:currentRadius - (self.lineWidth / 2.f)
@@ -60,7 +61,7 @@
 
 - (UIView *)createBorderView {
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
-    view.backgroundColor = [UIColor clearColor];
+    view.backgroundColor = [UIColor blueColor];
     view.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:view];
     

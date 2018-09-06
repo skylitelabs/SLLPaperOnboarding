@@ -74,11 +74,45 @@
                                                                            descriptionFont:self.descriptionFont];
     self.items = @[item1, item2, item3];
                                     
-//    self.skipButton = [[UIButton alloc] init];
-//    self.skipButton.titleLabel.text = @"Skip";
-//    self.skipButton.hidden = YES;
+    self.skipButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.skipButton setTitle:@"Skip"
+                     forState:UIControlStateNormal];
+    [self.skipButton setTitleColor:[UIColor blackColor]
+                          forState:UIControlStateNormal];
+    self.skipButton.titleLabel.font = [UIFont fontWithName:@"AvenirNext-Regular"
+                                                      size:24];
+    self.skipButton.translatesAutoresizingMaskIntoConstraints = NO;
+    self.skipButton.hidden = NO;
     [self setupPaperOnboardingView];
-//    [self.view bringSubviewToFront:self.skipButton];
+    [self.view addSubview:self.skipButton];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.skipButton
+                                                          attribute:NSLayoutAttributeRight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeRight
+                                                         multiplier:1.f
+                                                           constant:-20.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.skipButton
+                                                          attribute:NSLayoutAttributeTop
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:self.view
+                                                          attribute:NSLayoutAttributeTop
+                                                         multiplier:1.f
+                                                           constant:40.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.skipButton
+                                                          attribute:NSLayoutAttributeWidth
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:nil
+                                                          attribute:NSLayoutAttributeNotAnAttribute
+                                                         multiplier:1.f
+                                                           constant:70.f]];
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.skipButton
+                                                          attribute:NSLayoutAttributeHeight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:nil
+                                                          attribute:NSLayoutAttributeNotAnAttribute
+                                                         multiplier:1.f
+                                                           constant:45.f]];
 }
 
 - (void)setupPaperOnboardingView {

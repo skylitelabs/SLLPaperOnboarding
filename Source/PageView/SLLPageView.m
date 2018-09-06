@@ -22,7 +22,6 @@
                selectedRadius:(CGFloat)selectedRadius
                     itemColor:(UIColor *(^_Nullable)(NSInteger index))itemColor {
     if (self = [super initWithFrame:frame]) {
-        self.translatesAutoresizingMaskIntoConstraints = NO;
         self.itemsCount = itemsCount;
         self.itemRadius = radius;
         self.selectedItemRadius = selectedRadius;

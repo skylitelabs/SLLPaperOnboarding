@@ -9,6 +9,8 @@ Pod::Spec.new do |s|
 # Source Info
   s.platform     = :ios, '8.0'
   s.source       = { :git => 'https://github.com/skylitelabs/SLLPaperOnboarding.git', :tag => "0.0.1" }
-  s.source_files = 'Source/SLLPaperOnboarding.{h, m}', 'Source/SLLOnboardingItemInfo.{h, m}', 'Source/PageView/SLLPageView.{h, m}', 'Source/PageView/PageContainerView/SLLPageContainer.{h, m}', 'Source/PageView/Item/SLLPageViewItem.{h, m}', 'Source/OnboardingContentView/SLLOnboardingContentView.{h, m}', 'Source/OnboardingContentView/Item/SLLOnboardingContentViewItem.{h, m}', 'Source/GestureControl/SLLGestureControl.{h, m}', 'Source/FillAnimationView/SLLFillAnimationView.{h, m}'
+  s.source_files = 'Source/*.{h,m}', 'Source/PageView/*.{h,m}', 'Source/PageView/PageContainerView/*.{h,m}',
+'Source/PageView/Item/*.{h,m}', 'Source/OnboardingContentView/*.{h,m}', 'Source/OnboardingContentView/Item/*.{h,m}',
+'Source/GestureControl/*.{h,m}', 'Source/FillAnimationView/*.{h,m}'
   s.requires_arc = true
 end
